@@ -3,44 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Professional Portfolio - Engr. Michael Angelo Domingo</title>
     <style>
         body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        position: relative;
-        background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('resources/bg.jpg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-    }
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('resources/bg.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
         nav {
-            background-color: #333;
-            padding: 1em;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1.2em;
             text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
         }
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            padding: 0.5em 1em;
+            padding: 0.8em 1.5em;
             margin: 0 0.5em;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
         nav a:hover {
-            background-color: #555;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #66b3ff;
+            transform: translateY(-2px);
         }
         .content {
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 0 1em;
+            max-width: 900px;
+            margin: 3em auto;
+            padding: 2em;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
         }
+        .profile-image {
+        text-align: center;
+        margin: 2em auto;
+    }
+    
+    .name1 {
+        text-align: center;
+        margin: 2em auto;
+        font-size: 2em;
+    }
+
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #66b3ff;
+        box-shadow: 0 0 20px rgba(102, 179, 255, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .profile-image img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(102, 179, 255, 0.5);
+    }
         .profile-section {
-            margin-bottom: 2em;
+            margin-bottom: 3em;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .profile-section:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 1em;
+            color: #66b3ff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            color: #66b3ff;
+            border-bottom: 2px solid #66b3ff;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .profile-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .profile-section li {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .profile-section li:hover {
+            background-color: rgba(102, 179, 255, 0.1);
+            transform: translateX(10px);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1.5em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2em;
+            box-shadow: 0 -2px 15px rgba(0,0,0,0.3);
+        }
+        footer p {
+            margin: 0.5em 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #66b3ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        footer a:hover {
+            color: #99ccff;
+            text-decoration: underline;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -57,14 +159,20 @@
     
     <div class="content">
         <h1>Professional Profile</h1>
+        <div class="profile-image">
+            <img src="resources/icon.jpg" alt="Michael Angelo Domingo">
+        </div>
+        <div class="name1">
+            <h2>Engr. Michael Angelo Domingo</h2>
+        </div>
         <div class="profile-section">
             <h2>About Me</h2>
-            <p>I am an accomplished Electrical Engineer with expertise in power systems and electrical design. My professional journey has been marked by dedication to innovation and technical excellence.</p>
+            <p>I am an accomplished Civil Engineer with expertise in power systems and electrical design. My professional journey has been marked by dedication to innovation and technical excellence.</p>
         </div>
         
         <div class="profile-section">
             <h2>Education</h2>
-            <p>Bachelor of Science in Electrical Engineering<br>
+            <p>Bachelor of Science in Civil Engineering<br>
             Bataan Peninsula State University</p>
         </div>
         
@@ -89,5 +197,11 @@
             </ul>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Engr. Michael Angelo Domingo</p>
+        <p><a href="mailto:maedomingo24@bpsu.edu.ph">maedomingo24@bpsu.edu.ph</a></p>
+    </footer>
+
 </body>
 </html>
